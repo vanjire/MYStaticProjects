@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        position: relative;
+        position: relative;
+        display: grid;
+        grid-template-columns: 18% 1fr;
+        grid-template-rows: 50px 1fr;
+        grid-template-areas:
+            "nav nav"
+            "side-bar containt"
+
+        ;
+        width: 100%;
+        min-height: 100vh;
+        margin: auto;
+     
+    }
+
+    .nav {
+        position: sticky;
+        top: 0;
+        grid-area: nav;
+        display: flex;
+        align-items: center;
+
+        height: 50px;
+    }
+.f1 
+    { padding: 12px;
+        text-align: center;
+        width: 100px;
+        background-color:white;
+        border: 1px solid #000;
+        border-radius: 30px;
+    }
+    
+    .logo {
+        width: 20%;
+        height: 100%;
+        background-size: contain;
+    }
+
+    .logo img {
+       /* width: 25%;
+        height: 85%;
+        background-size: contain;*/
+         height: 100%;
+    max-width: 100px;
+    object-fit: contain;
+    }
+    .logo span{
+        text-decoration:wavy;
+        font-weight: bold;
+        font-size: larger;
+        position: relative;
+        right: 7px;
+       
+    }
+
+    .search {
+        flex-grow: 1;
+        padding: 10px;
+        margin-left: 10%;
+        margin-right: 8%;
+    }
+
+    .search input {
+        flex-grow: 1;
+        height: 40px;
+        border-top-left-radius: 10px;
+         border-bottom-left-radius: 10px;
+        border: 1px solid gray;
+       font-size: 18px;
+    }
+
+    .notify {
+        display: flex;
+        
+        height: 100%;
+
+        width: 20%;
+    }
+
+    .notify a {
+        margin-left: 15px;
+        text-decoration: none;
+        color: black;
+background-color:rgb(59, 203, 229);
+    }
+
+    .side-bar {
+        grid-area: side-bar;
+        position: sticky;
+        top:60px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        overflow-y: auto;
+       
+        scroll-behavior: smooth;
+       
+    }
+
+    .side-bar a {
+       
+         padding: 40px 0;
+    width: 100%;
+    text-align: center;
+    }
+
+    .containt {
+        
+        grid-area:containt ;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr;
+    }
+
+    .links {
+       
+      display: flex;
+      flex-direction: row;
+        align-items: center;
+        
+       position: sticky;
+       top:50px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+    }
+    .links a{
+        padding: 10px;
+        margin-left: 30px;
+        background-color: lightgray;
+        border-radius: 7px;
+        text-decoration: none;
+        color: black;
+      
+    }
+    .links a:hover{
+        background-color: rgba(169,169,169,0.7);
+       
+    }
+    .side-bar a{
+        border-radius: 7px;
+        text-decoration: none;
+        color: black;
+    }
+    .services
+    {
+        display: grid;
+        margin-top: 10px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: 200px;
+     
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+    .data{
+        background-color: lightgray;
+    }
+    .nav, .links{
+        
+        background-color: whitesmoke;
+    }
+    .f2{
+        border-radius: 70px;
+        background-color: lightgray;
+        padding: 10px;
+        background-color: darkcyan;
+    }
+   .sicon{
+    background-color: rgba(255, 255, 255, 0.729);
+    height: 40px;
+    border-top-right-radius: 10px;
+     border-bottom-right-radius: 10px;
+    width: 60px;
+    position: relative;
+    right: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    border: 1px solid gray;
+   }
+   .sicon img{
+    width: 24px;height: 24px;
+   
+   }
+   @media screen and (max-width:480px){
+    .container {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr;
+        grid-template-areas:
+            "nav nav"
+            "containt containt"
+
+        ;
+        width: 100%;
+        min-height: 100vh;
+        margin: auto;
+     
+    }
+
+        .services
+    {
+        display: grid;
+        margin-top: 10px;
+        grid-template-columns: auto ;
+        grid-auto-rows: 200px;
+     
+       
+        row-gap: 10px;
+    }.containt{width: 100%;}
+    .side-bar,.notify
+    {
+        display: none;
+    }
+    .nav{width: 100%;
+        height: 200px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        }input{width: 210px;}
+   }
+   .data img{
+  width: 100%;
+    height: 200px;
+   }
+</style>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="logo a"><img src="youtube.webp"> <span>YouTube</span></div>
+            <div class="search a"><input type="search" placeholder="search"><a href="" class="sicon"><img src="icons.png"></a></div>
+            <div class="notify a">
+                <a href="" class="f1">click</a><a href="" class="">click</a><a href="" class="f2">click</a>
+            </div>
+        </div>
+        <div class="side-bar">
+            <a href=""> click button</a>
+            <a href=""> click button</a>
+            <a href=""> click button</a>
+            <a href=""> click button</a>
+            <a href=""> click button</a>
+            <a href=""> click button</a>
+            <a href=""> click button</a>
+            <a href=""> click button</a>
+            <a href="">click</a>
+            <a href="">click</a>
+            <a href="">click</a>
+            <a href="">click</a>
+            <a href="">click</a>
+            <a href="">click</a>
+            <a href="">click</a>
+        </div>
+        <div class="containt">
+            <div class="links">
+                <a href="">click</a>
+                <a href="">click</a>
+                <a href="">click</a>
+                <a href="">click</a>
+                <a href="" >click</a>
+                <a href="">click</a>
+                <a href="">click</a>
+                <a href="">click</a>
+                <a href="">click</a>
+                <a href="">click</a>
+                <a href="">click</a>
+                <a href="">click</a>
+                <a href="">click</a>
+                <a href="">click</a>
+                <a href="">click</a>
+                <a href="">click</a>
+                <a href="">click</a>
+                <a href="">click</a>
+                <a href="">click</a>
+                <a href="">click</a>
+                <a href="">click</a>
+                <a href="">click</a>
+                <a href="">click</a>
+                <a href="">click</a>
+                <a href="">click</a>
+                <a href="">click</a>
+            </div>
+            <div class="services">
+                <div class="data">
+                    <img src="giris.webp" alt="xyzss">
+                </div>
+                 <div class="data">
+                    <img src="giris.webp" alt="xyzss">
+                </div>
+                 <div class="data">
+                    <img src="giris.webp" alt="xyzss">
+                </div>
+                 <div class="data">
+                    <img src="giris.webp" alt="xyzss">
+                </div>
+                 <div class="data">
+                    <img src="giris.webp" alt="xyzss">
+                </div>
+                 <div class="data">
+                    <img src="giris.webp" alt="xyzss">
+                </div>
+                 <div class="data">
+                    <img src="giris.webp" alt="xyzss">
+                </div>
+                 <div class="data">
+                    <img src="giris.webp" alt="xyzss">
+                </div>
+                 <div class="data"></div>
+                  <div class="data"></div>
+                   <div class="data"></div>
+                  <div class="data"></div>
+                   <div class="data"></div>
+                 <div class="data"></div>
+                  <div class="data"></div>
+                   <div class="data"></div>
+                 <div class="data"></div>
+                  <div class="data"></div>
+                   <div class="data"></div>
+                  <div class="data"></div>
+                   <div class="data"></div>
+                 <div class="data"></div>
+                  <div class="data"></div>
+                   <div class="data"></div>
+                 <div class="data"></div>
+                  <div class="data"></div>
+                   <div class="data"></div>
+                  <div class="data"></div>
+                   <div class="data"></div>
+                 <div class="data"></div>
+                  <div class="data"></div>
+                   <div class="data"></div>
+                 <div class="data"></div>
+                  <div class="data"></div>
+                   <div class="data"></div>
+                  <div class="data"></div>
+                   <div class="data"></div>
+                 <div class="data"></div>
+                  <div class="data"></div>
+                   <div class="data"></div>
+                 <div class="data"></div>
+                  <div class="data"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
