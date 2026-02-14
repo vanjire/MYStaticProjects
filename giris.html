@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="giris.css">
+    
+</head>
+<script>
+    function show()
+    {
+        document.querySelector(".links").style.display="flex";
+         document.querySelector(".links").style.flexDirection="column";
+          document.querySelector(".links").style.top="60px";
+           document.querySelector(".links").style.backgroundColor="lightgrey";
+           document.querySelector(".links").style.position="absolute";
+          document.querySelector(".links").style.position="absolute";
+    }
+      function rt(){let e1=document.getElementById("one");
+     let e2=document.getElementById("two");
+      let e3=document.getElementById("three");
+      let photos=["poster1.jpeg",'poster2.jpeg','poster3.jpeg','poster4.jpeg','poster5.jpeg','poster6.jpeg','poster7.jpeg'];
+      e2.setAttribute("src",photos[0]);
+         
+       let k=0;
+        let de=0;
+      setInterval(()=>{ 
+    
+        
+            e1.setAttribute("src",photos[k]);
+              e2.setAttribute("src",photos[k+1]);
+              e3.setAttribute("src",photos[k+2]);
+              de=0;
+         e1.style.transitionDuration="1s";
+            
+       let temp;
+        for(let i=0;i<photos.length-1;i++)
+      {
+         
+        temp=photos[0];
+        photos[i]=photos[i+1];
+       
+      }
+    photos[photos.length-1]=temp;
+    
+    
+},2000);
+
+      }
+</script>
+<body onload="rt()">
+    <div class="container">
+        <div class="nav">
+            <div class="logo">
+                <div class="name">GIRIS TECH <span>HUB</span> PVT LTD </div>
+                <div class="bott">...Talents Meets Aportunity</div>
+            </div>
+
+            <div class="menu1" onclick="show()"> <img src="dots.png"></div>
+
+            <div class="links">
+                
+                <div class="op">
+                    <a href="" target="_self">About Us ^</a>
+                    <div class="menu">
+                        <a href="">About Giri's Tech Hub</a>
+                        <a href="">About Director</a>
+                        <a href="">Services</a>
+                    </div>
+                </div>
+
+                <div class="op">
+                    <a href="">Course ^</a>
+                    <div class="menu">
+                        <a href="">Java Full-Stack Developer</a>
+
+                    </div>
+                </div>
+
+                <div class="op">
+                    <a href="">Demo Video ^</a>
+                    <div class="menu">
+                        <a href="">CPP Demo Videos</a>
+                        <a href="">JAVA Demo Videos</a>
+                    </div>
+                </div>
+
+                <a href="">Demo Study Material</a>
+                <a href="">Placement</a>
+                <a href="">Our Clients</a>
+                <a href="">Student Login</a>
+                <a href="">Download App</a>
+                <a href="">Enquiry</a>
+                <a href="">Fees Payment</a>
+
+
+            </div>
+        </div>
+        <div class="note">
+            <marquee direction="left" scrollamount="8">
+                * * * The new Java Full Stack Developer batch will commence on the 5th of every month. * * * The
+                entrance exam for admission is held on the 20th and 30th of every month. * * *
+
+
+            </marquee>
+
+        </div>
+      
+         <div class="slider">
+            <div class="img"></div>
+            <div class="list">
+
+                <ul>
+                    <li>4,800+ Student placed (Since 2018).</li>
+                    <li>500+ Batches Delivered (Since 2010).</li>
+                    <li>2,000+ Campus Events Conducted.</li>
+                    <li>1,000+ Satisfied Client</li>
+                    <li>INR 14 LPA is the Highest Salary Package.</li>
+                    <li>Admissions is based on the entrance exam.</li>
+                    <li>Over 200 algorithms and problem statements are covered in the classroom.</li>
+                </ul>
+
+
+                <label for="">WE Offers</label>
+
+                <ul>
+
+                    <li>Offline classroom training</li>
+                    <li>Online Zoom sessions</li>
+                    <li>An additional 300+ hours of recorded video content</li>
+                </ul>
+
+                <div id="download">
+                    <a href="">Download Entrance Exam</a>
+                </div>
+            </div>
+        </div>
+      
+        <div class="containt">
+            <div class="posters">
+                <div class="poster">
+                    <img src="" id="one">
+                </div>
+                <div class="poster" >
+                    <img src="" id="two">
+                </div>
+                <div class="poster">
+                    <img src="" id="three">
+                </div>
+            </div>
+            <h1>
+                We specialize in Java Full Stack Development with Data Structures, Generative AI, and the MERN Stack.
+
+            </h1>
+            <div class="board">
+                <img src="board.png">
+                <div class="explore"> <a href="">Explore Course</a></div>
+            </div>
+
+            <h1>Sucess Stories</h1>
+            <p>Meet our learners who have secured good jobs and experienced significant career growth.</p>
+           <div class="video">
+  <iframe width="100%" height="600px"
+    src="https://www.youtube.com/embed/videoseries?list=PLuWJ_1G_FgpGl7XUF7ulEQUVnkelsAnra"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
+
+
+            <h1>Why Choose <span id="why">'Giri's Tech Hub'</span></h1>
+            <p id="uio">
+                Giri's Tech Hub offers an extensive range of industry-leading services designed to equip you with the
+                skills and experience necessary to become job-ready and succeed in your tech career. Whether you're a
+                beginner or looking to level up your skills, our programs are tailored to meet your needs.
+            </p>
+
+            <div class="services">
+                <div class="box">
+                    <img src="gallry1.webp">
+                    <h3>Placement Support</h3>
+                    <p>Our dedicated placement team is committed to providing complete guidance and support throughout
+                        your job search journey. From creating personalized job search strategies to connecting you with
+                        recruiters and hiring partners, we ensure you have all the tools and resources you need to
+                        secure a rewarding job in the tech industry.</p>
+                </div>
+                <div class="box">
+                    <img src="gallry1.webp"  >
+                    <h3>Placement Support</h3>
+                    <p>Our dedicated placement team is committed to providing complete guidance and support throughout
+                        your job search journey. From creating personalized job search strategies to connecting you with
+                        recruiters and hiring partners, we ensure you have all the tools and resources you need to
+                        secure a rewarding job in the tech industry.</p>
+                </div>
+                <div class="box">
+                    <img src="gallry1.webp" >
+                    <h3>Placement Support</h3>
+                    <p>Our dedicated placement team is committed to providing complete guidance and support throughout
+                        your job search journey. From creating personalized job search strategies to connecting you with
+                        recruiters and hiring partners, we ensure you have all the tools and resources you need to
+                        secure a rewarding job in the tech industry.</p>
+                </div>
+
+                <div class="box">
+                    <img src="gallry1.webp" >
+                    <h3>Placement Support</h3>
+                    <p>Our dedicated placement team is committed to providing complete guidance and support throughout
+                        your job search journey. From creating personalized job search strategies to connecting you with
+                        recruiters and hiring partners, we ensure you have all the tools and resources you need to
+                        secure a rewarding job in the tech industry.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+</body>
+
+</html>
